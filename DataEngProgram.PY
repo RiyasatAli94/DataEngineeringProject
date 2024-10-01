@@ -11,9 +11,9 @@ DATABASE = 'db_a96a3c_riyasatali'
 USERNAME = 'db_a96a3c_riyasatali_admin'
 PASSWORD = 'Berlin@12277'
 
-connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}'
+connectionString = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}'
 
-Path = '/Users/riyasatali/Desktop/Subjects/Project_Data_Eng/PythonProgram/CountryVaccinations.csv'
+Path = 'CountryVaccinations.csv'
 datfile = pd.read_csv(Path)
 print(datfile)
 Country = datfile['location']
@@ -53,11 +53,11 @@ df = pd.DataFrame.from_records(rows, columns=columns)
 
 print(rows)
 
-csv_file_path = '/Users/riyasatali/Desktop/Subjects/Project_Data_Eng/PythonProgram/Database.csv'
+csv_file_path = 'Database.csv'
 df.to_csv(csv_file_path, index=False)
 
 #load the data from csv file
-file_path = "/Users/riyasatali/Desktop/Subjects/Project_Data_Eng/PythonProgram/Database.csv"
+file_path = 'Database.csv'
 data_CSV = pd.read_csv(file_path)
 # Convert date column to datetime
 data_CSV['date'] = pd.to_datetime(data_CSV['date'])
